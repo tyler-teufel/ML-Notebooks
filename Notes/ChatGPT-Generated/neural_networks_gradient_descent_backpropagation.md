@@ -34,7 +34,11 @@ The sigmoid function squashes the output into a range between 0 and 1, making it
 Once the input passes through the entire network and reaches the output layer, the network computes a **loss** (also called the cost) that measures the difference between the network’s prediction and the actual target value.
 
 For binary classification, a common loss function is the **binary cross-entropy loss**:
-$$J(\theta) = - \frac{1}{m} \sum_{i=1}^{m} [y_i \log(h_\theta(x_i)) + (1 - y_i) \log(1 - h_\theta(x_i))]$$
+
+$$
+J(\theta) = - \frac{1}{m} \sum_{i=1}^{m} [y_i \log(h_\theta(x_i)) + (1 - y_i) \log(1 - h_\theta(x_i))]
+$$
+
 where $h_\theta(x)$ is the predicted output, $y$ is the actual label, and $m$ is the number of training examples.
 
 ## 4. Gradient Descent in Neural Networks
