@@ -17,14 +17,10 @@ Each neuron in one layer is connected to neurons in the next layer by **weights*
 Each neuron in the hidden and output layers applies an **activation function** to its input to produce its output. The **sigmoid function** is a commonly used activation function, especially for binary classification problems.
 
 ### The Sigmoid Function:
-\[
-\sigma(z) = \frac{1}{1 + e^{-z}}
-\]
+$$\sigma(z) = \frac{1}{1 + e^{-z}}$$
 
 Here, \( z \) is the weighted sum of the inputs to the neuron, plus a bias term:
-\[
-z = \sum_{i=1}^{n} w_i x_i + b
-\]
+$$z = \sum_{i=1}^{n} w_i x_i + b$$
 
 The sigmoid function squashes the output into a range between 0 and 1, making it useful for interpreting the result as a probability.
 
@@ -38,10 +34,8 @@ The sigmoid function squashes the output into a range between 0 and 1, making it
 Once the input passes through the entire network and reaches the output layer, the network computes a **loss** (also called the cost) that measures the difference between the network’s prediction and the actual target value.
 
 For binary classification, a common loss function is the **binary cross-entropy loss**:
-\[
-J(\theta) = - \frac{1}{m} \sum_{i=1}^{m} [y_i \log(h_\theta(x_i)) + (1 - y_i) \log(1 - h_\theta(x_i))]
-\]
-where \( h_\theta(x) \) is the predicted output, \( y \) is the actual label, and \( m \) is the number of training examples.
+$$J(\theta) = - \frac{1}{m} \sum_{i=1}^{m} [y_i \log(h_\theta(x_i)) + (1 - y_i) \log(1 - h_\theta(x_i))]$$
+where $h_\theta(x)$ is the predicted output, $y$ is the actual label, and $m$ is the number of training examples.
 
 ## 4. Gradient Descent in Neural Networks
 
@@ -60,26 +54,26 @@ First, perform a forward pass to calculate the loss by feeding the inputs throug
 
 #### Step 2: Compute the Gradient of the Loss with Respect to Output (Backward Pass)
 For the output layer neuron with a sigmoid activation function:
-1. Compute the **derivative of the loss** with respect to the output neuron’s output \( a \):
-   \[
+1. Compute the **derivative of the loss** with respect to the output neuron’s output $a$:
+   $$
    \frac{\partial J}{\partial a}
-   \]
-2. Compute the **derivative of the sigmoid function** with respect to its input \( z \) (the weighted sum):
-   \[
+   $$
+2. Compute the **derivative of the sigmoid function** with respect to its input $z$ (the weighted sum):
+   $$
    \frac{\partial a}{\partial z} = a(1 - a)
-   \]
+   $$
    
 #### Step 3: Chain Rule to Compute Gradients for Hidden Layers
 Using the **chain rule**, the error is propagated back through the hidden layers:
-\[
+$$
 \frac{\partial J}{\partial w_i} = \frac{\partial J}{\partial z} \cdot \frac{\partial z}{\partial w_i}
-\]
+$$
 
 #### Step 4: Update Weights Using Gradient Descent
 Weights are updated using the rule:
-\[
+$$
 w_i := w_i - \alpha \frac{\partial J}{\partial w_i}
-\]
+$$
 
 ## 6. Tying Everything Together
 
@@ -93,9 +87,9 @@ The **sigmoid function** is useful because:
 1. It outputs a value between 0 and 1, making it great for binary classification.
 2. It’s differentiable, which is essential for backpropagation.
 3. The derivative is simple:
-   \[
+   $$
    \frac{d}{dz} \sigma(z) = \sigma(z)(1 - \sigma(z))
-   \]
+   $$
    
 ## Summary
 
