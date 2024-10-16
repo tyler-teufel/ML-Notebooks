@@ -62,9 +62,7 @@ As you dive deeper into AI and neural networks, calculus continues to be essenti
 
   For example, the derivative of the sigmoid function is:
   
-  $$
-  \frac{d}{dx} \sigma(x) = \sigma(x)(1 - \sigma(x))
-  $$
+  $$\frac{d}{dx} \sigma(x) = \sigma(x)(1 - \sigma(x))$$
 
 ## 7. Differential Equations and Reinforcement Learning
 
