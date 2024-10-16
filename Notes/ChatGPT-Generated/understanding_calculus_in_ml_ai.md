@@ -23,7 +23,7 @@ Derivatives play a huge role in **optimization**, which is at the heart of train
     \theta := \theta - \alpha \cdot \nabla J(\theta)
     $$
   
-    where \( \theta \) represents the model parameters, \( \alpha \) is the learning rate, and \( \nabla J(\theta) \) is the gradient of the cost function. By updating \( \theta \), the model improves over time.
+    where $ \theta $ represents the model parameters, $ \alpha $ is the learning rate, and $ \nabla J(\theta) $ is the gradient of the cost function. By updating $ \theta $, the model improves over time.
 
 **Example in Practice**: 
 - In logistic regression, the gradient of the cost function (derivative) with respect to model parameters is used to update them. Each time the gradient is calculated, it tells us how much to adjust our weights to improve classification accuracy.
@@ -46,9 +46,9 @@ Integrals are less prominent in the day-to-day implementation of machine learnin
   
   For example, the **normal distribution** has a probability density function:
   
-  \[
+  $$
   p(x) = \frac{1}{\sqrt{2\pi \sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}
-  \]
+  $$
   
   To find the probability of \( x \) being within a range, you integrate this function over that range.
 
@@ -64,9 +64,9 @@ As you dive deeper into AI and neural networks, calculus continues to be essenti
 
   For example, the derivative of the sigmoid function is:
   
-  \[
+  $$
   \frac{d}{dx} \sigma(x) = \sigma(x)(1 - \sigma(x))
-  \]
+  $$
 
 ## 7. Differential Equations and Reinforcement Learning
 
