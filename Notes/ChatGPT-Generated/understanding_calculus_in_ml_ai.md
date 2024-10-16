@@ -46,11 +46,7 @@ Integrals are less prominent in the day-to-day implementation of machine learnin
   
   For example, the **normal distribution** has a probability density function:
   
-  $$
-  
-  p(x) = \frac{1}{\sqrt{2\pi \sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}
-  
-  $$
+  $$p(x) = \frac{1}{\sqrt{2\pi \sigma^2}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}$$
   
   To find the probability of \( x \) being within a range, you integrate this function over that range.
 
