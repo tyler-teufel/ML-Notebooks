@@ -19,9 +19,9 @@ Derivatives play a huge role in **optimization**, which is at the heart of train
   - **Derivative (Gradient)**: The gradient is the derivative of the cost function with respect to the model’s parameters (like weights in a neural network). The gradient tells you which direction you should change your parameters to reduce the error.
   - **Gradient Descent Algorithm**: Using the derivative, the algorithm takes small steps in the direction that reduces the cost. Mathematically, this is:
   
-    \[
+    $$
     \theta := \theta - \alpha \cdot \nabla J(\theta)
-    \]
+    $$
   
     where \( \theta \) represents the model parameters, \( \alpha \) is the learning rate, and \( \nabla J(\theta) \) is the gradient of the cost function. By updating \( \theta \), the model improves over time.
 
