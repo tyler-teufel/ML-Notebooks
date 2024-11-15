@@ -38,9 +38,7 @@ GloVe aims to create embeddings such that the **ratio of co-occurrence probabili
 
 If $P_{ij}$ is the probability of word $j$ appearing in the context of word $i$, GloVe tries to satisfy the relationship:
 
-$$
-\frac{P_{ij}}{P_{ik}} \approx \frac{\text{similarity between } i \text{ and } j}{\text{similarity between } i \text{ and } k}
-$$
+$$\frac{P_{ij}}{P_{ik}} \approx \frac{\text{similarity between } i \text{ and } j}{\text{similarity between } i \text{ and } k}$$
 
 For instance, if "baseball" co-occurs frequently with "players" but less often with "love," their vector representations should reflect these relationships.
 
