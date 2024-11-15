@@ -46,18 +46,16 @@ For instance, if "baseball" co-occurs frequently with "players" but less often w
 
 GloVe uses a weighted least squares objective to ensure that the dot product of word vectors approximates the logarithm of the co-occurrence count:
 
-$$
-J = \sum_{i,j} f(X_{ij}) \left( \mathbf{w}_i^\top \mathbf{w}_j + b_i + b_j - \log(X_{ij}) \right)^2
-$$
+$$J = \sum_{i,j} f(X_{ij}) \left( \mathbf{w}_i^\top \mathbf{w}_j + b_i + b_j - \log(X_{ij}) \right)^2$$
 
-- $ X\_{ij} $: Co-occurrence count between words $ i $ and $ j $.
-- $ \mathbf{w}\_i $: Word vector for $ i $.
-- $ b_i, b_j $: Bias terms for words $ i $ and $ j $.
-- $ f(X\_{ij}) $: Weighting function to down-weight rare co-occurrences.
+- $X\_{ij}$: Co-occurrence count between words $ i $ and $ j $.
+- $\mathbf{w}\_i$: Word vector for $ i $.
+- $b_i, b_j$: Bias terms for words $ i $ and $ j $.
+- $f(X\_{ij})$: Weighting function to down-weight rare co-occurrences.
 
 ### 4. Optimization
 
-The word vectors $ \mathbf{w}\_i $ and bias terms $ b_i $ are learned by minimizing the loss $ J $ using gradient-based optimization.
+The word vectors $\mathbf{w}\_i$ and bias terms $ b_i $ are learned by minimizing the loss $ J $ using gradient-based optimization.
 
 ---
 
